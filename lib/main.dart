@@ -1,4 +1,6 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import './screens/products_overview_screen.dart';
 
@@ -10,10 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'MyShop',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: FlexThemeData.light(
+        scheme: FlexScheme.shark,
+        fontFamily: GoogleFonts.lato().fontFamily,
       ),
+      darkTheme: FlexThemeData.dark(scheme: FlexScheme.shark),
+      themeMode: ThemeMode.system,
       home: ProductsOverviewScreen(),
     );
   }
