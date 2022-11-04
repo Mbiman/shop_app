@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         ),
         darkTheme: FlexThemeData.dark(scheme: FlexScheme.shark),
         themeMode: ThemeMode.system,
-        home: ProductsOverviewScreen(),
+        home: const ProductsOverviewScreen(),
         routes: {
           ProductDetailScreen.namedRoutes: (context) =>
               const ProductDetailScreen(),
